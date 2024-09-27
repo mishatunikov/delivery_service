@@ -8,8 +8,8 @@ def platform_couting(robots: list[int], limit: int) -> int:
     platform_amount: int = 0
 
     while the_lightest_robot <= the_heaviest_robot:
-        if (int(sorted_robots[the_heaviest_robot]) +
-                int(sorted_robots[the_lightest_robot]) <= limit):
+        if (sorted_robots[the_heaviest_robot]
+                + sorted_robots[the_lightest_robot] <= limit):
             the_lightest_robot += 1
         the_heaviest_robot -= 1
         platform_amount += 1
